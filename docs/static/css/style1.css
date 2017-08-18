@@ -1,0 +1,22 @@
+.profile #header {
+  margin-bottom: 3em;
+}
+
+.profile h2 {
+  font: normal 17px/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #666;
+  padding-top: 1.8em;
+  padding-bottom: 1.8em;
+}
+
+.profile img.demo {
+}
+
+.feature-list {
+  padding-bottom: 3em;
+}
+
+.feature-list li {
+  font: normal 17px/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #666;
+}
