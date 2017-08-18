@@ -8,7 +8,7 @@ PICK_DIR = $(HOME)/.pick
 BIN_DIR = /usr/local/bin
 INSTALL = install
 
-FOLDERS = $(shell find . -mindepth 1 -type d -not -path "*.git*" -not -path "./githooks*" -not -path "./$(GOVENDOR)*" -not -path "./Godeps*" -not -path "*bin*")
+FOLDERS = $(shell find . -mindepth 1 -type d -not -path "*.git*" -not -path "./githooks*" -not -path "./$(GOVENDOR)*" -not -path "./Godeps*" -not -path "*bin*" -not -path "./docs*")
 
 VERSION = $(shell cat VERSION)
 LDFLAGS = -ldflags "-X main.version=$(VERSION)"
