@@ -1,0 +1,15 @@
+{{ partial "head.html" . }}
+<body>
+{{ partial "nav.html" . }}
+{{ partial "profile.html" . }}
+
+<section id="wrapper" class="docs">
+  <h3> Docs </h3>
+  <ul>
+    {{ range .Data.Pages.ByWeight }}
+    <li>
+      <a href='{{ .Permalink }}'>{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</section>
