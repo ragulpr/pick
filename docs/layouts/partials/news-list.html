@@ -1,0 +1,12 @@
+<ul id="post-list">
+  {{ $paginator := .Paginate (where .Data.Pages "Type" "news") }}
+  {{ range $paginator.Pages }}
+    {{ $url := replace .Permalink .Site.BaseURL "" }}
+        <li>
+            <a href='{{ .Permalink }}'><aside class="dates">{{ .Date.Format "Jan 2" }}</aside></a>
+            <a href='{{ .Permalink }}'>
+                {{ .Title }} <h2>{{ .Description | markdownify }}</h2>
+            </a>
+        </li>
+    {{ end }}
+</ul>
