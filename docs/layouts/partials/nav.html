@@ -3,9 +3,10 @@
 	{{ if not .IsHome }}
 		<a href='{{ .Site.BaseURL }}'> <span class="arrow">←</span>{{ with .Site.Params.home }}{{ . }}{{ else }}Home{{ end }}</a>
 	{{ end }}
-	<a href='https://github.com/bndw/pick/releases'>Download</a>
-	<a href='https://github.com/bndw/pick'>Github</a>
-	<a href='{{ .Site.BaseURL }}about'>{{ with .Site.Params.about }}{{ . }}{{ else }}About{{ end }}</a>
+  <a href='{{ .Site.BaseURL }}docs'>Docs</a>
+	<a href='https://github.com/bndw/pick'>
+    Github
+  </a>
 
 	{{ range $key, $val := .Site.Params.Links }}
 		<a href="{{ $val }}">{{ $key }}</a>

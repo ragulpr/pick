@@ -1,5 +1,5 @@
 .profile #header {
-  margin-bottom: 3em;
+  margin-bottom: 1.4em;
 }
 
 .profile h2 {
@@ -9,7 +9,8 @@
   padding-bottom: 1.8em;
 }
 
-.profile img.demo {
+.home img.demo {
+  margin-bottom: 3em;
 }
 
 .feature-list {
