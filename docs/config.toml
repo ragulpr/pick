@@ -1,4 +1,5 @@
 # Site settings
+baseurl = "https://pick.bndw.co/"
 
 title = "pick"
 theme = "hugo-theme-learn"
