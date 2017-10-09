@@ -1,4 +1,4 @@
-THEME=hugo-theme-cactus-plus
+THEME=hugo-theme-learn
 
 all: build
 

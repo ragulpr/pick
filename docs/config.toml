@@ -1,71 +1,21 @@
 # Site settings
-baseurl = "https://pick.bndw.co/"
-# HTML Language Code Reference, such as en, zh-cn
-languageCode = "en"
+
 title = "pick"
-theme = "hugo-theme-cactus-plus"
-# Enter your tracking code to enable Google Analytics
-googleAnalytics = "your_google_analytics_code"
-hasCJKLanguage = true
+theme = "hugo-theme-learn"
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
 
 [params]
-	name = "Pick"
-	description = "Minimal password manager"
-	# Enter optionally your twitter account
-	# twitter = "your_twotter"
-	enableRSS = false
+# Change default color scheme with a variant one. Can be "red", "blue",
+# "green".
+themeVariant = "blue"
 
-	# Disqus comment
-	disqusShortname = "your_disqus_short_name"
-	# Disable disqus comments by set `enableDisqus = "false"`
-	enableDisqus = false
+[[menu.shortcuts]]
+name = "Releases"
+url = "https://github.com/bndw/pick/releases"
+weight = 10
 
-	# Duoshuo comment
-	duoshuoShortname = "your_duoshuo_short_name"
-	# Disable duoshuo comments by set `enableDuoshuo = "false"`
-	enableDuoshuo = false
-
-	enableGithubIssuesTips = false
-
-	# Enable googleAnalytics
-	enableGoogleAnalytics = false
-
-	# Enable baiduAnalytics
-	enableBaiduAnalytics = false
-	# Baidu Tongji Code
-	baiduAnalytics = 'your_baidu_tongji_code'
-
-	# Add custom assets with their paths relative to the static folder
-	customCSS = ["css/style1.css"]
-	customJS  = []
-
-	# The variables below are optionally too and can be used to
-	# translate or customize each string of the theme.
-
-	# Navigation links
-	home = ""
-	about = ""
-	archive = ""
-	subscribe = ""
-	tags = ""
-	# Pagination links
-	olderPosts = ""
-	newerPosts = ""
-	readMore = ""
-	copyright = ""
-	# Sharing options and author information in posts
-	aboutAuthor = ""
-	tweet = ""
-	share = ""
-	# 404 page
-	title404 = ""
-	subtitle404 = ""
-
-	# Choose a font for the social icons in the footer. Either "mono-social" or "font-awesome"
-	iconFont = "font-awesome"
-  # The social icons can be styled differently if you use mono as font - circle, rounded, or empty
-  socialIconStyle = ""
-
-
-# Add additional social link entries underneath
-[social]
+[[menu.shortcuts]]
+name = "<i class='fa fa-github'></i> Github"
+url = "https://github.com/bndw/pick"
+weight = 11
