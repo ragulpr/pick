@@ -4,7 +4,6 @@ date =  2017-10-09T12:35:00-07:00
 weight = 2
 +++
 
-## Encryption
 The encryption section controls encryption for pick.
 
 Currently supported encryption types include `openpgp`, `aes_gcm`, and `chachapoly`.

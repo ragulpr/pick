@@ -6,8 +6,6 @@ chapter = true
 pre = "<b>1. </b>"
 +++
 
-# Installation
-
 ### go get
 ```sh
 go get -u github.com/bndw/pick

@@ -6,7 +6,6 @@ chapter = true
 pre = "<b>2. </b>"
 +++
 
-# Configuration
 Pick may be configured by creating a TOML file at  `~/.pick/config.toml`
 
 * [General](/configuration/general)

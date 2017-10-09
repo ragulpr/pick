@@ -4,7 +4,6 @@ date =  2017-10-09T12:35:00-07:00
 weight = 3
 +++
 
-## Storage
 The storage section controls safe storage for pick.
 
 Currently supported storage types include `file` and `s3`.
@@ -30,7 +29,7 @@ max = -1
 ```
 
 #### S3
-S3 storage uses the AWS S3 to store the Pick safe.
+S3 storage stores the Pick safe in an AWS S3 bucket.
 
 > NOTE: An Internet is required for this backend
 

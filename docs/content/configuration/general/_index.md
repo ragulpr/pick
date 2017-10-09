@@ -4,7 +4,6 @@ date =  2017-10-09T12:32:22-07:00
 weight = 1
 +++
 
-## General
 The general section controls general settings for pick.
 
 ```toml
