@@ -150,8 +150,13 @@ class Util():
 
     def generate_password(self, length=50):
         ''' Generates a random password of length '''
-        # Use no more than 256 chars in this string, rest will not be used
-        chars = string.digits + string.punctuation + string.letters
+        try:
+            chars = string.digits + string.punctuation + string.letters
+        except:
+            # Py3 letters->ascii_letters
+            chars = string.digits + string.punctuation + string.ascii_letters
+
+        # Use no more than 256 chars in this string, rest will not be used        
         num_chars = len(chars)
 
         def next_index():
