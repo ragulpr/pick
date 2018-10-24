@@ -13,6 +13,10 @@ import subprocess
 from sys import argv, exit, platform
 import time
 
+try:
+    input = raw_input  # Py3
+except:
+    input = input     # Py2
 
 class Safe():
 
@@ -187,11 +191,11 @@ class Util():
 
     def get_input(self, prompt):
         ''' Get user input with some default formatting '''
-        return raw_input('%s\n> ' % prompt)
+        return input('%s\n> ' % prompt)
 
     def get_answer(self, prompt, default='y'):
         ''' Gets a y/n answer for the prompt '''
-        answer = raw_input('%s? (y/n)\n> ' % prompt)
+        answer = input('%s? (y/n)\n> ' % prompt)
         if not answer:
             answer = default
 
