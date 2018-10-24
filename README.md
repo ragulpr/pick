@@ -13,6 +13,9 @@ Features
 
 Dependencies
 ------------
+#### Python
+Tested with Python 2.6, 2.7 or 3.7
+
 #### GPG
 * **OS X**: `brew install gpg` 
 * **Linux**: `sudo apt-get install gnupg`
@@ -25,7 +28,7 @@ Installation
 1. Clone the repository
     ```sh
     git clone https://github.com/bndw/pick.git && cd pick
-    git checkout v0.1
+    git checkout v0.1x
     ```
 
 2. Copy the `pick` executable into your PATH
