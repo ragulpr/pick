@@ -25,6 +25,7 @@ Installation
 1. Clone the repository
     ```sh
     git clone https://github.com/bndw/pick.git && cd pick
+    git checkout v0.1
     ```
 
 2. Copy the `pick` executable into your PATH
