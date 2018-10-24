@@ -1,4 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
+
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
 
 import json
 from getpass import getpass, getuser
@@ -36,7 +40,7 @@ class Safe():
             if not self.utils.get_answer('No safe found at %s, create one' % self.safe):
                 self.utils.die('You must create a safe', 100)
             else:
-                print self.initialize_safe()
+                print(self.initialize_safe())
 
         with open('/dev/null', 'w') as null:
             cmd = 'gpg --decrypt --batch --armor --passphrase %s %s' % (
@@ -153,7 +157,7 @@ class Util():
 
     def pretty_print(self, json_data):
         ''' Pretty prints JSON '''
-        print json.dumps(json_data, sort_keys=True, indent=4, separators=(',', ': '))
+        print(json.dumps(json_data, sort_keys=True, indent=4, separators=(',', ': ')))
 
     def get_platform(self):
         ''' Get the plaform we're running on '''
@@ -178,7 +182,7 @@ class Util():
     def die(self, message=None, code=0):
         ''' Exit the program with a message and code '''
         if message:
-            print message
+            print(message)
         exit(code)
 
     def get_input(self, prompt):
@@ -203,24 +207,24 @@ class Cli():
     def parse_args(self):
         ''' Parses the command line arguments '''
         if len(argv) <= 1:
-            print self.usage
+            print(self.usage)
             exit()
 
         self.prog = argv[0].strip()
         self.cmd = argv[1].strip()
 
         if self.cmd == '-h' or self.cmd == '--help':
-            print self.usage
+            print(self.usage)
             exit()
 
         if self.cmd == '--version':
-            print self.version
+            print(self.version)
             exit()
 
         self.cmd_args = argv[2:]
 
         if '-h' in self.cmd_args or '--help' in self.cmd_args:
-            print self.command_help(self.cmd)
+            print(self.command_help(self.cmd))
             exit()
 
     def command_help(self, cmd):
@@ -252,7 +256,7 @@ class Cli():
         else:
             alias, username, password = [None, None, None]
 
-        print self.safe.write_credential(alias, username, password)
+        print(self.safe.write_credential(alias, username, password))
 
     def do_cat(self):
         ''' Executes the cat command '''
@@ -275,7 +279,7 @@ class Cli():
         ''' Executes the ls command '''
         safe = self.safe.read_safe()
         for credential in safe['data'].keys():
-            print credential
+            print(credential)
 
     def do_rm(self):
         ''' Executes the rm command '''
@@ -283,7 +287,7 @@ class Cli():
             self.utils.die(self.command_help(self.cmd))
 
         for alias in self.cmd_args:
-            print self.safe.delete_credential(alias)
+            print(self.safe.delete_credential(alias))
 
     def run(self):
         ''' Runs a command '''
