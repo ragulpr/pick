@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python
 
 from __future__ import absolute_import
 from __future__ import division
@@ -310,7 +310,7 @@ class Cli():
             self.utils.die(self.usage)
 
 if __name__ == '__main__':
-    VERSION = '0.1.0'
+    VERSION = '0.1.1'
     USAGE = '''pick - minimal password manager
 
 Options:
